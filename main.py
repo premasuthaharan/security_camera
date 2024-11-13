@@ -1,4 +1,3 @@
-79% of storage used … If you run out, you can't create, edit, and upload files. Get 100 GB of storage for $1.99 $0 for 1 month.
 import flask
 from flask import Flask, render_template, Response
 from picamera.array import PiRGBArray
