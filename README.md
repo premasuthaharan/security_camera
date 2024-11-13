@@ -3,7 +3,7 @@
 This project is a Flask-based web application designed for the Raspberry Pi that provides real-time motion detection via a Pi Camera and audio transcription using the Google Speech Recognition API. The app offers a live video feed with motion detection overlays and allows basic audio transcription through a web interface.
 
 ## Features
-- **Motion Detection**: Detects and highlights areas of movement in a live video feed from the Pi Camera.
+- **Motion Detection**: Detects and highlights areas of movement in a live video feed.
 - **Audio Transcription**: Captures audio input and converts it to text.
 - **Web Interface**: Serves a web page for live streaming and audio transcription through the `/video_feed` and `/listen` endpoints.
 
