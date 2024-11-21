@@ -27,7 +27,7 @@ app = Flask(__name__)
 def index():
 	return render_template('index.html')
 
-
+#motion detection
 def detect_motion(image):
 	global reference_frame
 	min_area = 15
@@ -57,7 +57,7 @@ def detect_motion(image):
 	cv2.putText(image, datetime.datetime.now().strftime("%A %d %B %Y %I: %M: %S5p"), (10,image.shape[0]-10), cv2.FONT_HERSHEY_SIMPLEX, 0.35,(0,0,0),1)
 	
 	return image
-	
+
 def get_camera_frames(camera):
 	for frame in camera.capture_continuous(raw_capture, format="bgr", use_video_port=True):
 		image = frame.array
@@ -70,7 +70,9 @@ def get_camera_frames(camera):
 @app.route('/video_feed')
 def video_feed():
 	return Response(get_camera_frames(camera), mimetype='multipart/x-mixed-replace; boundary=frame')
-	
+
+#audio transcriber
+
 @app.route('/listen')		
 def transcribe_audio():
 	with mic as s:
