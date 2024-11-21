@@ -4,6 +4,7 @@ let subtitle = document.getElementById("subtitle");
 
 recordButton.addEventListener("click", startListening);
 
+//add 'start recording' functionality to button
 function startListening() {
 		recordButtonIcon.classList.replace("fa-microphone", "fa-circle");
 		recordButton.disabled = true;
